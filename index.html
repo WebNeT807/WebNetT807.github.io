@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galaxy Downloads</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Musique de fond -->
+  <audio id="bg-music" loop autoplay muted>
+    <source src="assets/Audio/Galaxy-1back.mp3" type="audio/mpeg">
+    Votre navigateur ne prend pas en charge l'élément audio.
+  </audio>
+
+  <!-- Header -->
+  <header class="text-center py-5">
+    <h1>🌌 Galaxy Downloads 🌌</h1>
+    <p class="lead">Téléchargez facilement vos fichiers préférés.</p>
+  </header>
+
+  <!-- Section des fichiers -->
+  <div class="container py-5">
+    <div id="file-list" class="row">
+      <!-- Les fichiers ajoutés via admin.html s'afficheront ici -->
+    </div>
+  </div>
+
+  <!-- Modale Admin (masquée par défaut) -->
+  <div id="admin-modal" class="modal fade" tabindex="-1" aria-labelledby="adminModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="adminModalLabel">Connexion Admin</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="admin-login-form">
+            <div class="mb-3">
+              <label for="admin-username" class="form-label">Identifiant</label>
+              <input type="text" class="form-control" id="admin-username" required>
+            </div>
+            <div class="mb-3">
+              <label for="admin-password" class="form-label">Mot de passe</label>
+              <input type="password" class="form-control" id="admin-password" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Connexion</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/index.js"></script>
+
+  <script>
+    // Attendre que l'utilisateur interagisse avant d'enlever le mute
+    document.body.addEventListener('click', function() {
+      let audio = document.getElementById('bg-music');
+      audio.muted = false; // Enlève le mute
+      audio.volume = 0.2; // Met le volume à 20%
+    });
+  </script>
+</body>
+</html>
