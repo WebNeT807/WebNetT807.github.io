@@ -1,0 +1,46 @@
+body {
+  background: linear-gradient(135deg, #232526, #414345);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  padding: 20px;
+  background: #00c6ff;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: white;
+  margin: 0;
+}
+
+form {
+  width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+input,
+textarea,
+button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+}
+
+button {
+  background: #ff512f;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #dd2476;
+}
